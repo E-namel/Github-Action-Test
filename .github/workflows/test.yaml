@@ -1,9 +1,14 @@
-on push:
 
-job:
+name: Example Workflow
+
+on: push
+
+jobs:
   job01:
     runs-on: ubuntu-latest
     steps:
-      - run: pwd
-      - run: ls
+      - name: 查看当前路径
+        run: pwd
+      - name: 列出当前目录文件
+        run: ls
 
